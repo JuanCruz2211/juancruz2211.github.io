@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Juan Cruz Escobar — Desarrollador Web profesional en Argentina. Diseño y desarrollo de sitios web modernos, rápidos y optimizados para tu negocio.">
+  <meta name="keywords" content="desarrollador web, diseño web, Argentina, portfolio, sitios web, responsive design, SEO">
+  <meta name="author" content="Juan Cruz Escobar">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Juan Cruz Escobar | Desarrollo Web Profesional">
+  <meta property="og:description" content="Desarrollador Web profesional en Argentina. Diseño y desarrollo de sitios web modernos, rápidos y optimizados.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <title>Juan Cruz Escobar | Desarrollo Web Profesional</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230A1F0F' rx='18' width='100' height='100'/><text x='50' y='62' font-family='serif' font-size='42' font-weight='bold' fill='%23DAA520' text-anchor='middle'>JCE</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- PRELOADER                                     -->
+  <!-- ════════════════════════════════════════════ -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader__logo">
+      <span class="preloader__letter">J</span>
+      <span class="preloader__letter">C</span>
+      <span class="preloader__letter">E</span>
+    </div>
+    <div class="preloader__bar"><div class="preloader__bar-inner"></div></div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- NAVIGATION                                    -->
+  <!-- ════════════════════════════════════════════ -->
+  <header id="header" class="header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="#inicio" class="nav__logo" aria-label="Ir al inicio">
+        <span class="nav__logo-text">JCE</span>
+      </a>
+
+      <ul class="nav__menu" id="navMenu" role="menubar">
+        <li role="none"><a href="#inicio" class="nav__link active" role="menuitem">Inicio</a></li>
+        <li role="none"><a href="#servicios" class="nav__link" role="menuitem">Servicios</a></li>
+        <li role="none"><a href="#proyectos" class="nav__link" role="menuitem">Proyectos</a></li>
+        <li role="none"><a href="#sobre-mi" class="nav__link" role="menuitem">Sobre Mí</a></li>
+        <li role="none"><a href="#contacto" class="nav__link" role="menuitem">Contacto</a></li>
+      </ul>
+
+      <button class="nav__hamburger" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ════════════════════════════════════════════ -->
+    <!-- HERO SECTION                                  -->
+    <!-- ════════════════════════════════════════════ -->
+    <section id="inicio" class="hero">
+      <!-- Animated background particles -->
+      <div class="hero__particles" id="heroParticles" aria-hidden="true"></div>
+      <!-- Geometric patterns -->
+      <div class="hero__geo" aria-hidden="true">
+        <div class="hero__geo-shape hero__geo-shape--1"></div>
+        <div class="hero__geo-shape hero__geo-shape--2"></div>
+        <div class="hero__geo-shape hero__geo-shape--3"></div>
+        <div class="hero__geo-shape hero__geo-shape--4"></div>
+        <div class="hero__geo-shape hero__geo-shape--5"></div>
+      </div>
+
+      <div class="hero__content container">
+        <p class="hero__greeting animate-on-scroll">Hola, soy</p>
+        <h1 class="hero__name animate-on-scroll">Juan Cruz<br><span class="hero__name--accent">Escobar</span></h1>
+        <div class="hero__typing-wrapper animate-on-scroll">
+          <span class="hero__typing-prefix">→&nbsp;</span>
+          <span class="hero__typing-text" id="typingText"></span>
+          <span class="hero__typing-cursor" aria-hidden="true">|</span>
+        </div>
+        <div class="hero__cta animate-on-scroll">
+          <a href="#proyectos" class="btn btn--primary">Ver mis proyectos</a>
+          <a href="#contacto" class="btn btn--secondary">Contáctame</a>
+        </div>
+      </div>
+
+      <a href="#servicios" class="hero__scroll-indicator" aria-label="Desplazar hacia abajo">
+        <span class="hero__scroll-text">Scroll</span>
+        <svg class="hero__scroll-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+      </a>
+    </section>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- SERVICIOS SECTION                             -->
+    <!-- ════════════════════════════════════════════ -->
+    <section id="servicios" class="section services">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <span class="section__tag">Lo que ofrezco</span>
+          <h2 class="section__title">Mis <span class="text-gold">Servicios</span></h2>
+          <p class="section__subtitle">Soluciones web diseñadas para impulsar tu presencia digital y hacer crecer tu negocio.</p>
+        </div>
+
+        <div class="services__grid">
+          <!-- Service 1 -->
+          <article class="service-card glass-card animate-on-scroll">
+            <div class="service-card__icon-wrapper">
+              <span class="service-card__icon">🌐</span>
+            </div>
+            <h3 class="service-card__title">Páginas Web</h3>
+            <p class="service-card__desc">Diseño y desarrollo de sitios web modernos, rápidos y optimizados para tu negocio.</p>
+            <div class="service-card__glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- Service 2 -->
+          <article class="service-card glass-card animate-on-scroll">
+            <div class="service-card__icon-wrapper">
+              <span class="service-card__icon">📱</span>
+            </div>
+            <h3 class="service-card__title">Diseño Responsivo</h3>
+            <p class="service-card__desc">Tu sitio se verá perfecto en cualquier dispositivo: móvil, tablet y escritorio.</p>
+            <div class="service-card__glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- Service 3 -->
+          <article class="service-card glass-card animate-on-scroll">
+            <div class="service-card__icon-wrapper">
+              <span class="service-card__icon">⚡</span>
+            </div>
+            <h3 class="service-card__title">Rendimiento &amp; SEO</h3>
+            <p class="service-card__desc">Optimización para que tu sitio cargue rápido y aparezca en Google.</p>
+            <div class="service-card__glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- Service 4 -->
+          <article class="service-card glass-card animate-on-scroll">
+            <div class="service-card__icon-wrapper">
+              <span class="service-card__icon">🛠️</span>
+            </div>
+            <h3 class="service-card__title">Mantenimiento Web</h3>
+            <p class="service-card__desc">Actualización, corrección de errores y soporte técnico continuo.</p>
+            <div class="service-card__glow" aria-hidden="true"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- PROYECTOS SECTION                             -->
+    <!-- ════════════════════════════════════════════ -->
+    <section id="proyectos" class="section projects">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <span class="section__tag">Mi trabajo</span>
+          <h2 class="section__title">Proyectos <span class="text-gold">Destacados</span></h2>
+          <p class="section__subtitle">Una selección de los proyectos más recientes en los que he trabajado.</p>
+        </div>
+
+        <div class="projects__grid">
+          <!-- Project 1 -->
+          <article class="project-card glass-card animate-on-scroll">
+            <div class="project-card__preview project-card__preview--1">
+              <div class="project-card__overlay">
+                <div class="project-card__actions">
+                  <a href="#" class="btn btn--small btn--primary" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+                  <a href="#" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer">Código</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Sabores del Sur</h3>
+              <p class="project-card__type">Landing page para restaurante gourmet</p>
+              <p class="project-card__desc">Sitio web elegante para un restaurante de cocina patagónica con menú interactivo y sistema de reservas.</p>
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card glass-card animate-on-scroll">
+            <div class="project-card__preview project-card__preview--2">
+              <div class="project-card__overlay">
+                <div class="project-card__actions">
+                  <a href="#" class="btn btn--small btn--primary" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+                  <a href="#" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer">Código</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">TechStore</h3>
+              <p class="project-card__type">E-commerce de tecnología</p>
+              <p class="project-card__desc">Tienda online con catálogo de productos, filtros de búsqueda y carrito de compras funcional.</p>
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card glass-card animate-on-scroll">
+            <div class="project-card__preview project-card__preview--3">
+              <div class="project-card__overlay">
+                <div class="project-card__actions">
+                  <a href="#" class="btn btn--small btn--primary" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+                  <a href="#" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer">Código</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Portfolio Creativo</h3>
+              <p class="project-card__type">Portfolio para fotógrafa</p>
+              <p class="project-card__desc">Galería de fotos con lightbox modal, animaciones suaves y diseño minimalista.</p>
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card glass-card animate-on-scroll">
+            <div class="project-card__preview project-card__preview--4">
+              <div class="project-card__overlay">
+                <div class="project-card__actions">
+                  <a href="#" class="btn btn--small btn--primary" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+                  <a href="#" class="btn btn--small btn--outline" target="_blank" rel="noopener noreferrer">Código</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Dashboard Analytics</h3>
+              <p class="project-card__type">Panel de control empresarial</p>
+              <p class="project-card__desc">Panel interactivo con gráficos, métricas en tiempo real y diseño oscuro profesional.</p>
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- SOBRE MÍ SECTION                             -->
+    <!-- ════════════════════════════════════════════ -->
+    <section id="sobre-mi" class="section about">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <span class="section__tag">Conóceme</span>
+          <h2 class="section__title">Sobre <span class="text-gold">Mí</span></h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__bio animate-on-scroll">
+            <p class="about__text">Soy un desarrollador web apasionado por crear experiencias digitales que combinan diseño elegante con funcionalidad sólida. Me especializo en construir sitios web modernos, rápidos y optimizados que ayudan a negocios a destacar en el mundo digital.</p>
+            <p class="about__text">Mi enfoque se centra en entender las necesidades de cada cliente para entregar soluciones web que realmente generen resultados. Cada proyecto es una oportunidad de superar expectativas.</p>
+
+            <div class="about__links">
+              <a href="https://github.com/JuanCruz2211" class="about__social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/juan-cruz-escobar-2a8b75199/" class="about__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="about__skills animate-on-scroll">
+            <h3 class="about__skills-title">Tecnologías</h3>
+            <div class="skills__tags">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Responsive Design</span>
+              <span class="skill-tag">SEO</span>
+              <span class="skill-tag">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats counter -->
+        <div class="about__stats animate-on-scroll" id="statsSection">
+          <div class="stat-card glass-card">
+            <span class="stat-card__number" data-target="10">0</span>
+            <span class="stat-card__suffix">+</span>
+            <p class="stat-card__label">Proyectos Completados</p>
+          </div>
+          <div class="stat-card glass-card">
+            <span class="stat-card__number" data-target="100">0</span>
+            <span class="stat-card__suffix">%</span>
+            <p class="stat-card__label">Clientes Satisfechos</p>
+          </div>
+          <div class="stat-card glass-card">
+            <span class="stat-card__number" data-target="2">0</span>
+            <span class="stat-card__suffix">+</span>
+            <p class="stat-card__label">Años de Experiencia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- CONTACTO SECTION                              -->
+    <!-- ════════════════════════════════════════════ -->
+    <section id="contacto" class="section contact">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <span class="section__tag">Hablemos</span>
+          <h2 class="section__title">¿Tenés un proyecto <span class="text-gold">en mente</span>?</h2>
+          <p class="section__subtitle">Contáctame y hagamos realidad tu idea.</p>
+        </div>
+
+        <div class="contact__grid">
+          <!-- Contact Form -->
+          <form class="contact__form glass-card animate-on-scroll" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="contactName" class="form-label">Nombre</label>
+              <input type="text" id="contactName" name="name" class="form-input" placeholder="Tu nombre" required autocomplete="name">
+              <span class="form-error" id="nameError">Por favor ingresá tu nombre.</span>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail" class="form-label">Email</label>
+              <input type="email" id="contactEmail" name="email" class="form-input" placeholder="tu@email.com" required autocomplete="email">
+              <span class="form-error" id="emailError">Por favor ingresá un email válido.</span>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage" class="form-label">Mensaje</label>
+              <textarea id="contactMessage" name="message" class="form-input form-textarea" placeholder="Contame sobre tu proyecto..." rows="5" required></textarea>
+              <span class="form-error" id="messageError">Por favor escribí tu mensaje.</span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+              <span class="btn__text">Enviar Mensaje</span>
+              <span class="btn__loader" aria-hidden="true"></span>
+            </button>
+            <!-- Success message -->
+            <div class="form-success" id="formSuccess" aria-live="polite">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              <p>¡Mensaje enviado con éxito! Te responderé pronto.</p>
+            </div>
+          </form>
+
+          <!-- Contact Info -->
+          <div class="contact__info animate-on-scroll">
+            <div class="contact__info-card glass-card">
+              <div class="contact__info-item">
+                <div class="contact__info-icon">
+                  <!-- Email Icon -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div>
+                  <h4 class="contact__info-label">Email</h4>
+                  <a href="mailto:juancruzescobar@email.com" class="contact__info-value">juancruzescobar@email.com</a>
+                </div>
+              </div>
+              <div class="contact__info-item">
+                <div class="contact__info-icon">
+                  <!-- Location Icon -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h4 class="contact__info-label">Ubicación</h4>
+                  <p class="contact__info-value">Argentina 🇦🇷</p>
+                </div>
+              </div>
+              <div class="contact__info-item">
+                <div class="contact__info-icon">
+                  <!-- GitHub Icon -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </div>
+                <div>
+                  <h4 class="contact__info-label">GitHub</h4>
+                  <a href="https://github.com/JuanCruz2211" class="contact__info-value" target="_blank" rel="noopener noreferrer">github.com/JuanCruz2211</a>
+                </div>
+              </div>
+              <div class="contact__info-item">
+                <div class="contact__info-icon">
+                  <!-- LinkedIn Icon -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </div>
+                <div>
+                  <h4 class="contact__info-label">LinkedIn</h4>
+                  <a href="https://www.linkedin.com/in/juan-cruz-escobar-2a8b75199/" class="contact__info-value" target="_blank" rel="noopener noreferrer">Juan Cruz Escobar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- FOOTER                                        -->
+  <!-- ════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <a href="#inicio" class="nav__logo" aria-label="Ir al inicio">
+            <span class="nav__logo-text">JCE</span>
+          </a>
+          <p class="footer__tagline">Desarrollo Web Profesional</p>
+        </div>
+
+        <div class="footer__social">
+          <a href="https://github.com/JuanCruz2211" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/juan-cruz-escobar-2a8b75199/" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Juan Cruz Escobar. Todos los derechos reservados.</p>
+        <p class="footer__made">Hecho con 💛 en Argentina</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
