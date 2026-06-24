@@ -775,22 +775,22 @@ html {
 
 .project-card__preview--1 {
   background: linear-gradient(135deg, rgba(26, 58, 42, 0.3), rgba(184, 134, 11, 0.2)),
-              url('assets/images/project-restaurant.png') center/cover no-repeat;
+              url('assets/images/project-landing-frontend.png') center/cover no-repeat;
 }
 
 .project-card__preview--2 {
   background: linear-gradient(135deg, rgba(10, 31, 15, 0.3), rgba(44, 83, 100, 0.2)),
-              url('assets/images/project-ecommerce.png') center/cover no-repeat;
+              url('assets/images/project-maison-dor.png') center/cover no-repeat;
 }
 
 .project-card__preview--3 {
   background: linear-gradient(135deg, rgba(26, 26, 46, 0.3), rgba(26, 58, 42, 0.2)),
-              url('assets/images/project-photography.png') center/cover no-repeat;
+              url('assets/images/project-planificador.png') center/cover no-repeat;
 }
 
 .project-card__preview--4 {
   background: linear-gradient(135deg, rgba(15, 32, 39, 0.3), rgba(26, 58, 42, 0.2)),
-              url('assets/images/project-dashboard.png') center/cover no-repeat;
+              url('assets/images/project-blog-django.png') center/cover no-repeat;
 }
 
 /* Decorative grid pattern inside previews */
