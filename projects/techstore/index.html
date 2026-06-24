@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechStore — La mejor tecnología al mejor precio. Laptops, smartphones, audio y accesorios con envío gratis y garantía de 12 meses.">
+    <meta name="keywords" content="tecnología, laptops, smartphones, audio, accesorios, ofertas, Argentina">
+    <meta name="author" content="TechStore Argentina">
+    <meta property="og:title" content="TechStore — Tecnología Premium">
+    <meta property="og:description" content="La mejor tecnología al mejor precio. Envío gratis en todo el país.">
+    <meta property="og:type" content="website">
+    <title>TechStore — Tecnología Premium al Mejor Precio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- NAVBAR                                      -->
+    <!-- ═══════════════════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">
+                <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect x="2" y="6" width="28" height="20" rx="3" stroke="#6C5CE7" stroke-width="2"/>
+                    <rect x="6" y="10" width="12" height="8" rx="1" fill="#6C5CE7" opacity="0.3"/>
+                    <circle cx="24" cy="14" r="2" fill="#00D2FF"/>
+                    <line x1="10" y1="28" x2="22" y2="28" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="16" y1="26" x2="16" y2="28" stroke="#6C5CE7" stroke-width="2"/>
+                </svg>
+                <span>Tech<span class="logo-accent">Store</span></span>
+            </a>
+
+            <div class="nav-search">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8888A0" stroke-width="2">
+                    <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/>
+                </svg>
+                <input type="text" placeholder="Buscar productos..." aria-label="Buscar productos">
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#categorias" class="nav-link">Categorías</a></li>
+                <li><a href="#productos" class="nav-link">Productos</a></li>
+                <li><a href="#ofertas" class="nav-link">Ofertas</a></li>
+                <li><a href="#beneficios" class="nav-link">Beneficios</a></li>
+                <li>
+                    <button class="nav-cart" id="cartBtn" aria-label="Ver carrito">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                            <line x1="3" y1="6" x2="21" y2="6"/>
+                            <path d="M16 10a4 4 0 01-8 0"/>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="#categorias" class="mobile-link">Categorías</a>
+            <a href="#productos" class="mobile-link">Productos</a>
+            <a href="#ofertas" class="mobile-link">Ofertas</a>
+            <a href="#beneficios" class="mobile-link">Beneficios</a>
+            <button class="mobile-cart-btn" id="mobileCartBtn">
+                🛒 Carrito (<span class="mobile-cart-count">0</span>)
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon">✓</div>
+        <div class="toast-text">
+            <strong id="toastProduct">Producto</strong>
+            <span>agregado al carrito</span>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- HERO SECTION                                -->
+    <!-- ═══════════════════════════════════════════ -->
+    <header class="hero" id="hero">
+        <!-- Animated background shapes -->
+        <div class="hero-bg">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            <div class="grid-overlay"></div>
+        </div>
+
+        <div class="container hero-content">
+            <div class="hero-badge anim-fade-up">⚡ Nuevos Lanzamientos 2026</div>
+            <h1 class="hero-title anim-fade-up">
+                La Mejor Tecnología<br>
+                al <span class="gradient-text">Mejor Precio</span>
+            </h1>
+            <p class="hero-subtitle anim-fade-up">
+                Descubrí los últimos gadgets, laptops y smartphones con envío gratis a todo el país. 
+                Tecnología premium que se adapta a tu vida.
+            </p>
+            <div class="hero-actions anim-fade-up">
+                <a href="#productos" class="btn btn-primary">
+                    Ver Productos
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#ofertas" class="btn btn-outline">Ver Ofertas</a>
+            </div>
+            <div class="hero-stats anim-fade-up">
+                <div class="stat">
+                    <span class="stat-number">2.500+</span>
+                    <span class="stat-label">Productos</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">15.000+</span>
+                    <span class="stat-label">Clientes</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">4.9 ★</span>
+                    <span class="stat-label">Valoración</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- CATEGORÍAS                                  -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="section categories" id="categorias">
+        <div class="container">
+            <div class="section-header anim-fade-up">
+                <span class="section-tag">Explorá</span>
+                <h2 class="section-title">Categorías</h2>
+                <p class="section-subtitle">Encontrá exactamente lo que necesitás en nuestras categorías curadas</p>
+            </div>
+
+            <div class="categories-grid">
+                <button class="category-card active anim-fade-up" data-category="laptops">
+                    <div class="category-icon">
+                        <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+                            <rect x="6" y="8" width="36" height="24" rx="3" stroke="currentColor" stroke-width="2.5"/>
+                            <rect x="12" y="14" width="16" height="10" rx="1" fill="currentColor" opacity="0.15"/>
+                            <path d="M2 36h44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M18 32h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Laptops</h3>
+                    <p>MacBooks, ultrabooks y gaming</p>
+                    <span class="category-count">+120 productos</span>
+                </button>
+
+                <button class="category-card anim-fade-up" data-category="smartphones">
+                    <div class="category-icon">
+                        <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+                            <rect x="12" y="4" width="24" height="40" rx="4" stroke="currentColor" stroke-width="2.5"/>
+                            <line x1="20" y1="38" x2="28" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="24" cy="10" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Smartphones</h3>
+                    <p>iPhone, Samsung y más</p>
+                    <span class="category-count">+85 productos</span>
+                </button>
+
+                <button class="category-card anim-fade-up" data-category="audio">
+                    <div class="category-icon">
+                        <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+                            <path d="M10 20v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M10 20a14 14 0 0128 0" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                            <path d="M10 28a4 4 0 01-4-4v-0a4 4 0 014-4" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M38 28a4 4 0 004-4v-0a4 4 0 00-4-4" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M38 20v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M10 28c0 6 6 12 14 12" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                            <circle cx="24" cy="40" r="3" stroke="currentColor" stroke-width="2.5"/>
+                        </svg>
+                    </div>
+                    <h3>Audio</h3>
+                    <p>Auriculares y parlantes</p>
+                    <span class="category-count">+60 productos</span>
+                </button>
+
+                <button class="category-card anim-fade-up" data-category="accesorios">
+                    <div class="category-icon">
+                        <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="18" width="40" height="16" rx="3" stroke="currentColor" stroke-width="2.5"/>
+                            <rect x="10" y="23" width="4" height="4" rx="0.5" fill="currentColor" opacity="0.3"/>
+                            <rect x="16" y="23" width="4" height="4" rx="0.5" fill="currentColor" opacity="0.3"/>
+                            <rect x="22" y="23" width="4" height="4" rx="0.5" fill="currentColor" opacity="0.3"/>
+                            <rect x="28" y="23" width="4" height="4" rx="0.5" fill="currentColor" opacity="0.3"/>
+                            <rect x="34" y="23" width="4" height="4" rx="0.5" fill="currentColor" opacity="0.3"/>
+                            <rect x="14" y="28" width="20" height="3" rx="0.5" fill="currentColor" opacity="0.15"/>
+                            <path d="M16 18V12a8 8 0 0116 0v6" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3>Accesorios</h3>
+                    <p>Teclados, mouses y más</p>
+                    <span class="category-count">+200 productos</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- PRODUCTOS DESTACADOS                        -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="section products" id="productos">
+        <div class="container">
+            <div class="section-header anim-fade-up">
+                <span class="section-tag">Lo más vendido</span>
+                <h2 class="section-title">Productos Destacados</h2>
+                <p class="section-subtitle">Selección curada de los mejores productos del momento</p>
+            </div>
+
+            <div class="products-grid">
+
+                <!-- Product 1: MacBook Air M3 -->
+                <article class="product-card anim-fade-up" data-category="laptops">
+                    <div class="product-image">
+                        <div class="product-img-placeholder" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.5">
+                                <rect x="10" y="15" width="60" height="38" rx="4" stroke="#6C5CE7" stroke-width="2"/>
+                                <rect x="16" y="20" width="30" height="18" rx="2" fill="#6C5CE7" opacity="0.15"/>
+                                <path d="M5 58h70" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M30 53h20" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="product-badge badge-new">Nuevo</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Laptops</span>
+                        <h3 class="product-name">MacBook Air M3</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(324)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-original">$1.899.990</span>
+                            <span class="price-current">$1.549.990</span>
+                        </div>
+                        <button class="btn-add-cart" data-product="MacBook Air M3" data-price="1549990">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                                <line x1="3" y1="6" x2="21" y2="6"/>
+                                <path d="M16 10a4 4 0 01-8 0"/>
+                            </svg>
+                            Agregar al Carrito
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Product 2: iPhone 16 Pro -->
+                <article class="product-card anim-fade-up" data-category="smartphones">
+                    <div class="product-image">
+                        <div class="product-img-placeholder" style="background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 50%, #11001c 100%);">
+                            <svg width="60" height="80" viewBox="0 0 60 80" fill="none" opacity="0.5">
+                                <rect x="10" y="5" width="40" height="70" rx="8" stroke="#845EF7" stroke-width="2"/>
+                                <line x1="22" y1="68" x2="38" y2="68" stroke="#845EF7" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="30" cy="14" r="3" stroke="#845EF7" stroke-width="1.5"/>
+                                <rect x="16" y="20" width="28" height="40" rx="2" fill="#845EF7" opacity="0.1"/>
+                            </svg>
+                        </div>
+                        <span class="product-badge badge-offer">-18%</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Smartphones</span>
+                        <h3 class="product-name">iPhone 16 Pro</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(512)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-original">$2.199.990</span>
+                            <span class="price-current">$1.799.990</span>
+                        </div>
+                        <button class="btn-add-cart" data-product="iPhone 16 Pro" data-price="1799990">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                                <line x1="3" y1="6" x2="21" y2="6"/>
+                                <path d="M16 10a4 4 0 01-8 0"/>
+                            </svg>
+                            Agregar al Carrito
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Product 3: Sony WH-1000XM5 -->
+                <article class="product-card anim-fade-up" data-category="audio">
+                    <div class="product-image">
+                        <div class="product-img-placeholder" style="background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1c2333 100%);">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.5">
+                                <path d="M20 40v12" stroke="#00D2FF" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M20 40a20 20 0 0140 0" stroke="#00D2FF" stroke-width="2.5" fill="none"/>
+                                <ellipse cx="20" cy="48" rx="6" ry="8" stroke="#00D2FF" stroke-width="2"/>
+                                <ellipse cx="60" cy="48" rx="6" ry="8" stroke="#00D2FF" stroke-width="2"/>
+                                <path d="M60 40v12" stroke="#00D2FF" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="product-badge badge-offer">Oferta</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Audio</span>
+                        <h3 class="product-name">Sony WH-1000XM5</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★<span class="star-half">★</span></span>
+                            <span class="rating-count">(287)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-original">$649.990</span>
+                            <span class="price-current">$479.990</span>
+                        </div>
+                        <button class="btn-add-cart" data-product="Sony WH-1000XM5" data-price="479990">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                                <line x1="3" y1="6" x2="21" y2="6"/>
+                                <path d="M16 10a4 4 0 01-8 0"/>
+                            </svg>
+                            Agregar al Carrito
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Product 4: Samsung Galaxy S25 -->
+                <article class="product-card anim-fade-up" data-category="smartphones">
+                    <div class="product-image">
+                        <div class="product-img-placeholder" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);">
+                            <svg width="60" height="80" viewBox="0 0 60 80" fill="none" opacity="0.5">
+                                <rect x="10" y="5" width="40" height="70" rx="8" stroke="#A78BFA" stroke-width="2"/>
+                                <rect x="14" y="12" width="32" height="50" rx="3" fill="#A78BFA" opacity="0.1"/>
+                                <circle cx="30" cy="70" r="2" fill="#A78BFA" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <span class="product-badge badge-new">Nuevo</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Smartphones</span>
+                        <h3 class="product-name">Samsung Galaxy S25</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(198)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-original">$1.499.990</span>
+                            <span class="price-current">$1.299.990</span>
+                        </div>
+                        <button class="btn-add-cart" data-product="Samsung Galaxy S25" data-price="1299990">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                                <line x1="3" y1="6" x2="21" y2="6"/>
+                                <path d="M16 10a4 4 0 01-8 0"/>
+                            </svg>
+                            Agregar al Carrito
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Product 5: AirPods Pro -->
+                <article class="product-card anim-fade-up" data-category="audio">
+                    <div class="product-image">
+                        <div class="product-img-placeholder" style="background: linear-gradient(135deg, #1a1a2e 0%, #1f1f3a 50%, #16213e 100%);">
+                            <svg width="70" height="70" viewBox="0 0 70 70" fill="none" opacity="0.5">
+                                <rect x="15" y="10" width="40" height="30" rx="15" stroke="#6C5CE7" stroke-width="2"/>
+                                <line x1="25" y1="40" x2="25" y2="55" stroke="#6C5CE7" stroke-width="2.5" stroke-linecap="round"/>
+                                <line x1="45" y1="40" x2="45" y2="55" stroke="#6C5CE7" stroke-width="2.5" stroke-linecap="round"/>
+                                <circle cx="25" cy="25" r="4" fill="#6C5CE7" opacity="0.3"/>
+                                <circle cx="45" cy="25" r="4" fill="#6C5CE7" opacity="0.3"/>
+                            </svg>
+                        </div>
+                        <span class="product-badge badge-offer">-25%</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Audio</span>
+                        <h3 class="product-name">AirPods Pro (2da Gen)</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(421)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-original">$449.990</span>
+                            <span class="price-current">$339.990</span>
+                        </div>
+                        <button class="btn-add-cart" data-product="AirPods Pro (2da Gen)" data-price="339990">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                                <line x1="3" y1="6" x2="21" y2="6"/>
+                                <path d="M16 10a4 4 0 01-8 0"/>
+                            </svg>
+                            Agregar al Carrito
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Product 6: Logitech MX Master -->
+                <article class="product-card anim-fade-up" data-category="accesorios">
+                    <div class="product-image">
+                        <div class="product-img-placeholder" style="background: linear-gradient(135deg, #111827 0%, #1f2937 50%, #111827 100%);">
+                            <svg width="70" height="70" viewBox="0 0 70 70" fill="none" opacity="0.5">
+                                <ellipse cx="35" cy="38" rx="18" ry="22" stroke="#0EA5E9" stroke-width="2"/>
+                                <line x1="35" y1="18" x2="35" y2="32" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round"/>
+                                <ellipse cx="35" cy="30" rx="5" ry="8" fill="#0EA5E9" opacity="0.15"/>
+                                <circle cx="35" cy="24" r="3" stroke="#0EA5E9" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <span class="product-badge badge-offer">Oferta</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Accesorios</span>
+                        <h3 class="product-name">Logitech MX Master 3S</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(156)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-original">$189.990</span>
+                            <span class="price-current">$149.990</span>
+                        </div>
+                        <button class="btn-add-cart" data-product="Logitech MX Master 3S" data-price="149990">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                                <line x1="3" y1="6" x2="21" y2="6"/>
+                                <path d="M16 10a4 4 0 01-8 0"/>
+                            </svg>
+                            Agregar al Carrito
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- OFERTAS ESPECIALES                          -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="section offers" id="ofertas">
+        <div class="container">
+            <div class="offers-banner anim-fade-up">
+                <div class="offers-bg-shapes">
+                    <div class="offer-shape offer-shape-1"></div>
+                    <div class="offer-shape offer-shape-2"></div>
+                    <div class="offer-shape offer-shape-3"></div>
+                </div>
+                <div class="offers-content">
+                    <span class="offers-tag">⚡ Flash Sale</span>
+                    <h2 class="offers-title">Hasta <span class="offers-highlight">40% OFF</span> en toda la tienda</h2>
+                    <p class="offers-subtitle">Oferta válida por tiempo limitado. ¡No te la pierdas!</p>
+                    <div class="countdown" id="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="countDays">02</span>
+                            <span class="countdown-label">Días</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="countHours">14</span>
+                            <span class="countdown-label">Horas</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="countMinutes">37</span>
+                            <span class="countdown-label">Minutos</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="countSeconds">52</span>
+                            <span class="countdown-label">Segundos</span>
+                        </div>
+                    </div>
+                    <a href="#productos" class="btn btn-primary btn-lg">
+                        Aprovechar Ahora
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- BENEFICIOS                                  -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="section benefits" id="beneficios">
+        <div class="container">
+            <div class="section-header anim-fade-up">
+                <span class="section-tag">¿Por qué elegirnos?</span>
+                <h2 class="section-title">Beneficios TechStore</h2>
+                <p class="section-subtitle">Todo lo que necesitás para comprar con total tranquilidad</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card anim-fade-up">
+                    <div class="benefit-icon">
+                        <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+                            <path d="M6 30l8-8 8 8 14-14" stroke="#00D2FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="4" y="8" width="40" height="32" rx="4" stroke="#00D2FF" stroke-width="2.5"/>
+                            <path d="M4 16h40" stroke="#00D2FF" stroke-width="2.5"/>
+                            <circle cx="10" cy="12" r="1.5" fill="#00D2FF"/>
+                            <circle cx="16" cy="12" r="1.5" fill="#00D2FF"/>
+                            <circle cx="22" cy="12" r="1.5" fill="#00D2FF"/>
+                        </svg>
+                    </div>
+                    <h3>Envío Gratis</h3>
+                    <p>Envío gratuito a todo el país en compras superiores a $50.000. Seguimiento en tiempo real.</p>
+                </div>
+
+                <div class="benefit-card anim-fade-up">
+                    <div class="benefit-icon">
+                        <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 4L6 14v16c0 10 18 14 18 14s18-4 18-14V14L24 4z" stroke="#6C5CE7" stroke-width="2.5" stroke-linejoin="round"/>
+                            <path d="M17 24l5 5 9-9" stroke="#6C5CE7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Garantía 12 Meses</h3>
+                    <p>Todos nuestros productos cuentan con garantía oficial de 12 meses. Tu compra está protegida.</p>
+                </div>
+
+                <div class="benefit-card anim-fade-up">
+                    <div class="benefit-icon">
+                        <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="12" width="40" height="28" rx="4" stroke="#34D399" stroke-width="2.5"/>
+                            <path d="M4 20h40" stroke="#34D399" stroke-width="2.5"/>
+                            <rect x="8" y="28" width="14" height="4" rx="1" fill="#34D399" opacity="0.3"/>
+                            <circle cx="36" cy="32" r="4" stroke="#34D399" stroke-width="2"/>
+                            <circle cx="32" cy="32" r="4" stroke="#34D399" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Pago en Cuotas</h3>
+                    <p>Hasta 12 cuotas sin interés con todas las tarjetas. Comprá ahora y pagá después.</p>
+                </div>
+
+                <div class="benefit-card anim-fade-up">
+                    <div class="benefit-icon">
+                        <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+                            <path d="M44 34c0 2-2 4-4 4H12l-8 6V12c0-2 2-4 4-4h32c2 0 4 2 4 4v22z" stroke="#845EF7" stroke-width="2.5" stroke-linejoin="round"/>
+                            <circle cx="16" cy="23" r="2" fill="#845EF7"/>
+                            <circle cx="24" cy="23" r="2" fill="#845EF7"/>
+                            <circle cx="32" cy="23" r="2" fill="#845EF7"/>
+                        </svg>
+                    </div>
+                    <h3>Soporte 24/7</h3>
+                    <p>Nuestro equipo está disponible las 24 horas para ayudarte con cualquier consulta o problema.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- NEWSLETTER                                  -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="section newsletter" id="newsletter">
+        <div class="container">
+            <div class="newsletter-card anim-fade-up">
+                <div class="newsletter-content">
+                    <div class="newsletter-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="10" width="40" height="28" rx="4" stroke="#6C5CE7" stroke-width="2.5"/>
+                            <path d="M4 14l20 14 20-14" stroke="#6C5CE7" stroke-width="2.5" stroke-linejoin="round"/>
+                            <circle cx="38" cy="14" r="6" fill="#6C5CE7"/>
+                            <path d="M36 14h4M38 12v4" stroke="#0D0D12" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h2>Recibí las Mejores Ofertas</h2>
+                    <p>Suscribite a nuestro newsletter y recibí ofertas exclusivas, novedades y descuentos antes que nadie.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="newsletter-input-group">
+                            <input type="email" placeholder="Tu correo electrónico" required aria-label="Correo electrónico">
+                            <button type="submit" class="btn btn-primary">
+                                Suscribirme
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="newsletter-hint">🔒 No compartimos tu información. Podés cancelar en cualquier momento.</span>
+                    </form>
+                    <div class="newsletter-success" id="newsletterSuccess">
+                        <span>🎉</span> ¡Gracias por suscribirte! Vas a recibir las mejores ofertas en tu correo.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- FOOTER                                      -->
+    <!-- ═══════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo footer-logo">
+                        <svg class="logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <rect x="2" y="6" width="28" height="20" rx="3" stroke="#6C5CE7" stroke-width="2"/>
+                            <rect x="6" y="10" width="12" height="8" rx="1" fill="#6C5CE7" opacity="0.3"/>
+                            <circle cx="24" cy="14" r="2" fill="#00D2FF"/>
+                            <line x1="10" y1="28" x2="22" y2="28" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="16" y1="26" x2="16" y2="28" stroke="#6C5CE7" stroke-width="2"/>
+                        </svg>
+                        <span>Tech<span class="logo-accent">Store</span></span>
+                    </a>
+                    <p>Tu destino de tecnología premium en Argentina. Los mejores productos al mejor precio con envío gratis y garantía oficial.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                <circle cx="12" cy="12" r="5"/>
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter/X" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4l16 16M20 4L4 20"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="4"/>
+                                <polygon points="10,8 16,12 10,16" fill="currentColor" stroke="none"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="3"/>
+                                <line x1="8" y1="11" x2="8" y2="17"/>
+                                <line x1="8" y1="8" x2="8" y2="8.01" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M12 17v-4c0-2 1.5-3 3-3s3 1 3 3v4"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Tienda</h4>
+                    <ul>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">Smartphones</a></li>
+                        <li><a href="#">Audio</a></li>
+                        <li><a href="#">Accesorios</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Centro de Ayuda</a></li>
+                        <li><a href="#">Seguí tu Pedido</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Garantía</a></li>
+                        <li><a href="#">Contactanos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Política de Cookies</a></li>
+                        <li><a href="#">Defensa al Consumidor</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-payment">
+                <span>Métodos de pago:</span>
+                <div class="payment-icons">
+                    <div class="payment-icon" title="Visa">
+                        <svg width="40" height="26" viewBox="0 0 40 26"><rect width="40" height="26" rx="4" fill="#1C1C28"/><text x="20" y="17" text-anchor="middle" fill="#0EA5E9" font-family="Outfit" font-weight="700" font-size="11">VISA</text></svg>
+                    </div>
+                    <div class="payment-icon" title="Mastercard">
+                        <svg width="40" height="26" viewBox="0 0 40 26"><rect width="40" height="26" rx="4" fill="#1C1C28"/><circle cx="16" cy="13" r="7" fill="#845EF7" opacity="0.7"/><circle cx="24" cy="13" r="7" fill="#00D2FF" opacity="0.7"/></svg>
+                    </div>
+                    <div class="payment-icon" title="Mercado Pago">
+                        <svg width="40" height="26" viewBox="0 0 40 26"><rect width="40" height="26" rx="4" fill="#1C1C28"/><text x="20" y="17" text-anchor="middle" fill="#00D2FF" font-family="Outfit" font-weight="700" font-size="8">MP</text></svg>
+                    </div>
+                    <div class="payment-icon" title="Transferencia">
+                        <svg width="40" height="26" viewBox="0 0 40 26"><rect width="40" height="26" rx="4" fill="#1C1C28"/><text x="20" y="17" text-anchor="middle" fill="#34D399" font-family="Outfit" font-weight="600" font-size="8">CBU</text></svg>
+                    </div>
+                    <div class="payment-icon" title="American Express">
+                        <svg width="40" height="26" viewBox="0 0 40 26"><rect width="40" height="26" rx="4" fill="#1C1C28"/><text x="20" y="17" text-anchor="middle" fill="#A78BFA" font-family="Outfit" font-weight="700" font-size="8">AMEX</text></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 TechStore Argentina. Todos los derechos reservados.</p>
+                <p>Hecho con 💜 en Buenos Aires</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
