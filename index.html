@@ -291,6 +291,18 @@
               <span class="skill-tag">Responsive Design</span>
               <span class="skill-tag">SEO</span>
             </div>
+
+            <h3 class="about__skills-title" style="margin-top: var(--space-xl);">Certificaciones</h3>
+            <div class="certification-card glass-card">
+              <div class="certification-card__content">
+                <span class="certification-card__icon">📜</span>
+                <div>
+                  <h4 class="certification-card__title">Python</h4>
+                  <p class="certification-card__issuer">Coderhouse • 52 hs (13 semanas)</p>
+                </div>
+              </div>
+              <button class="btn btn--small btn--primary open-certificate">Ver Certificado</button>
+            </div>
           </div>
         </div>
 
@@ -434,6 +446,17 @@
       </div>
     </div>
   </footer>
+
+  <!-- Certificate Modal -->
+  <div id="certificateModal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal__overlay"></div>
+    <div class="modal__container glass-card">
+      <button class="modal__close" aria-label="Cerrar ventana">&times;</button>
+      <div class="modal__content">
+        <img src="assets/images/certificado-python.png" alt="Certificado Python Coderhouse" class="modal__img">
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
