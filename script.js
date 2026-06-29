@@ -328,21 +328,45 @@
 
       if (!valid) return;
 
-      // Simulate send
+      // Enviar datos reales a formsubmit.co
       submitBtn.classList.add('loading');
       submitBtn.disabled = true;
 
-      setTimeout(() => {
+      fetch("https://formsubmit.co/ajax/juancruz311567@gmail.com", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            Nombre: nameInput.value.trim(),
+            Email: emailInput.value.trim(),
+            Mensaje: messageInput.value.trim(),
+            _subject: "Nuevo mensaje de contacto desde tu Portfolio!"
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
         submitBtn.classList.remove('loading');
         submitBtn.disabled = false;
-        successMsg.classList.add('show');
-        form.reset();
-
-        // Hide success after 5s
-        setTimeout(() => {
-          successMsg.classList.remove('show');
-        }, 5000);
-      }, 1500);
+        
+        if (data.success === "true" || data.success) {
+            successMsg.classList.add('show');
+            form.reset();
+            // Ocultar mensaje despues de 5s
+            setTimeout(() => {
+              successMsg.classList.remove('show');
+            }, 5000);
+        } else {
+            alert("Hubo un problema al enviar el mensaje. Intenta nuevamente.");
+        }
+      })
+      .catch(error => {
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+        console.error(error);
+        alert("Ocurrió un error en el servidor. Por favor, escribime directamente a mi email.");
+      });
     });
   }
 
