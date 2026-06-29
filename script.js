@@ -410,40 +410,6 @@
     );
   }
 
-  /* ─── CERTIFICATE MODAL ────────────────────────────── */
-
-  function initCertificateModal() {
-    const modal = $('#certificateModal');
-    const openBtn = $('.open-certificate');
-    if (!modal || !openBtn) return;
-
-    const closeBtn = $('.modal__close', modal);
-    const overlay = $('.modal__overlay', modal);
-
-    function openModal(e) {
-      e.preventDefault();
-      modal.classList.add('open');
-      modal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-
-    openBtn.addEventListener('click', openModal);
-    closeBtn.addEventListener('click', closeModal);
-    overlay.addEventListener('click', closeModal);
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal.classList.contains('open')) {
-        closeModal();
-      }
-    });
-  }
-
   /* ─── INIT EVERYTHING ──────────────────────────────── */
 
   function init() {
@@ -458,7 +424,6 @@
     initContactForm();
     initParticles();
     initHeroParallax();
-    initCertificateModal();
   }
 
   // Start when DOM is ready
