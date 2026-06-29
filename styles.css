@@ -1475,3 +1475,73 @@ a.contact__info-value:hover {
   border-radius: 4px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
+
+/* ─── SERVICE ICON ANIMATIONS ──────────────────────── */
+
+/* 🌐 Slow 3D rotation — "the world is spinning" */
+@keyframes iconSpin {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+.icon-spin {
+  display: inline-block;
+  animation: iconSpin 6s linear infinite;
+}
+
+/* 📱 Gentle bounce — "responsive on every device" */
+@keyframes iconBounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+.icon-bounce {
+  display: inline-block;
+  animation: iconBounce 2s ease-in-out infinite;
+}
+
+/* ⚡ Pulse glow — "speed & energy" */
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(1.2); opacity: 0.85; }
+}
+
+.icon-pulse {
+  display: inline-block;
+  animation: iconPulse 1.8s ease-in-out infinite;
+}
+
+/* 🛠️ Wiggle — "tools at work" */
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  20%      { transform: rotate(12deg); }
+  40%      { transform: rotate(-10deg); }
+  60%      { transform: rotate(6deg); }
+  80%      { transform: rotate(-4deg); }
+}
+
+.icon-wiggle {
+  display: inline-block;
+  animation: iconWiggle 2.5s ease-in-out infinite;
+}
+
+/* Pause animations when user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .icon-spin,
+  .icon-bounce,
+  .icon-pulse,
+  .icon-wiggle {
+    animation: none;
+  }
+}
+
+/* ─── CERTIFICATIONS STANDALONE SECTION ────────────── */
+.certifications-section {
+  background:
+    radial-gradient(ellipse 40% 50% at 20% 60%, rgba(26, 58, 42, 0.2) 0%, transparent 70%),
+    var(--bg-dark);
+}
+
+.certifications-section__grid {
+  max-width: 480px;
+}
