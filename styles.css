@@ -1485,7 +1485,7 @@ a.contact__info-value:hover {
 }
 
 .icon-spin {
-  display: inline-block;
+  display: inline-flex;
   animation: iconSpin 6s linear infinite;
 }
 
@@ -1496,7 +1496,7 @@ a.contact__info-value:hover {
 }
 
 .icon-bounce {
-  display: inline-block;
+  display: inline-flex;
   animation: iconBounce 2s ease-in-out infinite;
 }
 
@@ -1507,7 +1507,7 @@ a.contact__info-value:hover {
 }
 
 .icon-pulse {
-  display: inline-block;
+  display: inline-flex;
   animation: iconPulse 1.8s ease-in-out infinite;
 }
 
@@ -1521,7 +1521,7 @@ a.contact__info-value:hover {
 }
 
 .icon-wiggle {
-  display: inline-block;
+  display: inline-flex;
   animation: iconWiggle 2.5s ease-in-out infinite;
 }
 
